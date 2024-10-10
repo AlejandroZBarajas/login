@@ -1,0 +1,30 @@
+
+<div id="form">
+    <h1>Formulario de registro</h1>
+
+    <div id="formBody">
+        <form (ngSubmit)="toRegister()">
+        <div class="inputField">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" [(ngModel)]="newUser.name" name="nombre" required />
+        </div>
+
+        <div class="inputField">
+            <label for="username">Nombre de usuario:</label>
+            <input id="username" type="text" [(ngModel)]="newUser.username" name="username" required />
+        </div>
+
+        <div class="inputField">
+            <label for="password">Password:</label>
+            <input id="password" type="text" [(ngModel)]="newUser.password" name="password" required />
+        </div>
+
+        <button type="submit">Guardar</button>
+        
+        </form>
+    </div>
+    <div>
+        <app-dashboard [users]="users"></app-dashboard>
+    </div>
+
+</div>
